@@ -179,12 +179,16 @@ namespace Nop.Web.Controllers
 
             if (ModelState.IsValid)
             {
+                var strCommentText = model.AddNewComment.CommentText;
+                if (false == _newsSettings.NewsCommentsMustBeApproved)
+                    strCommentText = "Automatically approved: " + strCommentText;
+
                 var comment = new NewsComment
                 {
                     NewsItemId = newsItem.Id,
                     CustomerId = (await _workContext.GetCurrentCustomerAsync()).Id,
                     CommentTitle = model.AddNewComment.CommentTitle,
-                    CommentText = model.AddNewComment.CommentText,
+                    CommentText = strCommentText,
                     IsApproved = !_newsSettings.NewsCommentsMustBeApproved,
                     StoreId = (await _storeContext.GetCurrentStoreAsync()).Id,
                     CreatedOnUtc = DateTime.UtcNow,
