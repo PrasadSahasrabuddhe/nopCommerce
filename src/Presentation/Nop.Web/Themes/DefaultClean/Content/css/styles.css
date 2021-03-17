@@ -6667,7 +6667,8 @@ pre {
   .header-menu {
     position: relative;
     z-index: 1;
-    width: 90%;
+    width: 100%;
+    background-color: lightgray;
     max-width: 600px;
     margin: 0 auto 40px;
   }
@@ -6780,9 +6781,13 @@ pre {
   /*** GLOBAL ***/
 
 
-  .master-wrapper-content,
+  .master-wrapper-content {
+    width: 100%;
+  }
+
   .header-menu {
-    width: 92.5%;
+    width: 100%;
+    background-color: lightgray;
   }
 
 
@@ -7960,7 +7965,8 @@ pre {
   .header-menu {
     position: relative;
     z-index: 5;
-    width: 980px;
+    width: 100%;
+    background-color: lightgray;
     margin: 0 auto 30px;
     border-top: 1px solid #ddd;
     border-bottom: 1px solid #ddd;
@@ -8626,7 +8632,8 @@ pre {
 
 
   .header-menu {
-    width: 1200px;
+    width: 100%;
+    background-color: lightgray;
   }
 
   .header-menu > ul > li {
